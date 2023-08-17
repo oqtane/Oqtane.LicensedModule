@@ -23,15 +23,11 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="Oqtane.Client">
-			<HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net7.0\Oqtane.Client.dll</HintPath>
-		</Reference>
-		<Reference Include="Oqtane.Shared">
-			<HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net7.0\Oqtane.Shared.dll</HintPath>
-		</Reference>
+		<PackageReference Include="Oqtane.Client" Version="4.0.2" />
+		<PackageReference Include="Oqtane.Shared" Version="4.0.2" />
 	</ItemGroup>
 
-  <PropertyGroup>
+	<PropertyGroup>
     <!-- there may be other elements here -->
     <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
