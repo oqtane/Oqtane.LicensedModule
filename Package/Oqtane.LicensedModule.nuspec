@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Oqtane.LicensedModule</id>
-    <version>4.0.3</version>
+    <version>4.0.2</version>
     <authors>Oqtane Labs Inc</authors>
     <owners>Oqtane Labs Inc</owners>
     <title>LicensedModule</title>
