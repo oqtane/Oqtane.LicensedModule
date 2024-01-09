@@ -1,6 +1,6 @@
 # Oqtane.LicensedModule
 
-Oqtane is a CMS and app framework which can be extended with additional modules and themes. Extensions which are developed as off-the-shelf products by ISVs are available through the [Oqtane Marketplace](https://www.oqtane.net). Extensions can be offered under either an open source license or commercial license. Commercial extensions will need to include a licensing capability to restrict access to authorized users. Developers can utilize their own licensing solution within their extensions, or they can take advantage of the integrated licensing solution which is included with the Oqtane Framework. 
+Oqtane is a CMS and app framework which can be extended with additional modules and themes. Extensions which are developed as off-the-shelf products by ISVs must be registered in the [Oqtane Marketplace](https://www.oqtane.net). Extensions can be offered under either an open source license or commercial license. Commercial extensions will need to include a licensing capability to restrict access to authorized users. Developers can utilize their own licensing solution within their extensions, or they can take advantage of the integrated licensing solution which is included with the Oqtane Framework. 
 
 This repo provides an example of a simplistic commercial module which utilizes the integrated licensing solution.
 
@@ -14,7 +14,7 @@ Includes the Nuget package reference to Oqtane.Licensing:
 
 Index.razor
 
-Includes the LicenseView component as a wrapper around the module content. The PackageName parameter is required and should match the PackageName specified in the ModuleInfo.cs (IModule interface definition). Note that there are also content sections for NotLicensed and Validating which can optionally be implemented depending on your requirements.
+Includes the LicenseView component as a wrapper around the module content. The PackageName parameter is required and should match the PackageName specified in the ModuleInfo.cs (IModule interface definition). It must also match the Package Name field which is specified for the product in the Oqtane Marketplace administrative UI. Note that the LicenseView component also supports content sections for NotLicensed and Validating which can optionally be implemented depending on your requirements.
 
 ```
 @namespace Oqtane.LicensedModule
