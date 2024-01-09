@@ -9,12 +9,12 @@ Oqtane.LicensedModule.Client.csproj
 Includes the Nuget package reference to Oqtane.Licensing:
 
 ```
-	<PackageReference Include="Oqtane.Licensing" Version="5.0.0" />
+<PackageReference Include="Oqtane.Licensing" Version="5.0.0" />
 ```
 
 Index.razor
 
-Includes the LicenseView component as a wrapper around the module content. The PackageName parameter is required and should match the PackageName specified in the ModuleInfo.cs (IModule interface definition). 
+Includes the LicenseView component as a wrapper around the module content. The PackageName parameter is required and should match the PackageName specified in the ModuleInfo.cs (IModule interface definition). Note that there are also content sections for NotLicensed and Validating which can optionally be implemented depending on your requirements.
 
 ```
 @namespace Oqtane.LicensedModule
@@ -28,5 +28,30 @@ Includes the LicenseView component as a wrapper around the module content. The P
 </LicenseView>
 ```
 
-Note that there are also content sections for NotLicensed and Validating which can optionally be implemented depending on your requirements.
+ModuleInfo.cs
 
+If you wish to allow your module to support Blazor WebAssembly you will need to ensure you specify the licensing component as a dependency of your module:
+
+```
+Dependencies = "Oqtane.Licensing.Client.Oqtane,Oqtane.Licensing.Shared.Oqtane"
+```
+
+Oqtane.LicensedModule.Package.cspro
+
+Note that the Oqtane.LicensedModule.Package project contains no specific reference to the licensing component. This is because the licensing component is distributed by default with the Oqtane Framework starting in version 5.0. If you need to support older versions of Oqtane (ie. 4.x, 3.x, etc...) then you will need to distribute the licensing component with your module. This would require you to modify the following files:
+
+debug.cmd
+
+```
+XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Client.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\" /Y
+XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Server.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\" /Y
+XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Shared.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\" /Y
+```
+
+Oqtane.LicensedModule.nuspec
+
+```
+<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Client.Oqtane.dll" target="lib\net8.0" /> 
+<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Shared.Oqtane.dll" target="lib\net8.0" />
+<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Server.Oqtane.dll" target="lib\net8.0" />
+```
