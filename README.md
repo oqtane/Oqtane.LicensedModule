@@ -4,4 +4,29 @@ Oqtane is a CMS and app framework which can be extended with additional modules 
 
 This repo provides an example of a simplistic commercial module which utilizes the integrated licensing solution.
 
+Oqtane.LicensedModule.Client.csproj 
+
+Includes the Nuget package reference to Oqtane.Licensing:
+
+```
+	<PackageReference Include="Oqtane.Licensing" Version="5.0.0" />
+```
+
+Index.razor
+
+Includes the LicenseView component as a wrapper around the module content. The PackageName parameter is required and should match the PackageName specified in the ModuleInfo.cs (IModule interface definition). 
+
+```
+@namespace Oqtane.LicensedModule
+@using Oqtane.Licensing
+@inherits ModuleBase
+
+<LicenseView PackageName="@ModuleState.ModuleDefinition.PackageName">
+    <Licensed>
+        <p>I am Licensed!</p>
+    </Licensed>
+</LicenseView>
+```
+
+Note that there are also content sections for NotLicensed and Validating which can optionally be implemented depending on your requirements.
 
