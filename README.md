@@ -55,3 +55,24 @@ Oqtane.LicensedModule.nuspec
 <file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Shared.Oqtane.dll" target="lib\net8.0" />
 <file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Server.Oqtane.dll" target="lib\net8.0" />
 ```
+
+# Oqtane Marketplace Sites
+
+As mentioned above, extensions which are developed as off-the-shelf products by ISVs must be registered in the Oqtane Marketplace. In order to allow developers to safely test the licensing process for their extensions, there are in fact 2 distinct Marketplace sites:
+
+[Sandbox Marketplace](https://sandbox.oqtane.net) - a test environment where extensions can be registered and e-commerce transactions can be simulated
+
+[Production Marketplace](https://www.oqtane.net) - the actual production Oqtane Marketplace
+
+In order to test the licensing process, you will want to use the Sandbox Marketplace. You can login to the Sandbox Marketplace using your GitHub account and register your products. Once the products are registered, you will want to point your local development environment to the Sandbox Marketplace. You can do this by setting the PackageRegistryUrl setting in appsettings.json (you can also manage this via the Oqtane Admin Dashboard UI and choosing the System Info option - Options tab).
+
+appsettings.json
+
+```
+  "PackageRegistryUrl": "https://sandbox.oqtane.net"
+```
+
+Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashbord and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow. 
+
+Be sure to remember to reset the PackageRegistryUrl when you are finished testing.
+
