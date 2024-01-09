@@ -72,7 +72,7 @@ appsettings.json
   "PackageRegistryUrl": "https://sandbox.oqtane.net"
 ```
 
-Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashbord and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow. 
+Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashboard and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow for these products. 
 
 Be sure to remember to reset the PackageRegistryUrl when you are finished testing.
 
