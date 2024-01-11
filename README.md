@@ -40,7 +40,7 @@ Oqtane.LicensedModule.Package.csproj
 
 Note that the Oqtane.LicensedModule.Package project contains no specific reference to the licensing component. This is because the licensing component is distributed by default with the Oqtane Framework starting in version 5.0. If you need to support older versions of Oqtane (ie. 4.x, 3.x, etc...) then you will need to distribute the licensing component with your module. This would require you to modify the following files:
 
-debug.cmd
+debug.cmd (to copy the assemblies during development)
 
 ```
 XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Client.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\" /Y
@@ -48,7 +48,7 @@ XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Server.Oqtane.dll" "..\..\oqt
 XCOPY "..\Client\bin\Debug\net8.0\Oqtane.Licensing.Shared.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\" /Y
 ```
 
-Oqtane.LicensedModule.nuspec
+Oqtane.LicensedModule.nuspec (to include the assemblies in the Nuget package)
 
 ```
 <file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Client.Oqtane.dll" target="lib\net8.0" /> 
