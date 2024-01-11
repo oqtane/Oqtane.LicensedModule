@@ -64,7 +64,7 @@ As mentioned above, extensions which are developed as off-the-shelf products by 
 
 [Production Marketplace](https://www.oqtane.net) - the actual production Oqtane Marketplace
 
-In order to test the licensing process, you will want to use the Sandbox Marketplace. You can login to the Sandbox Marketplace using your GitHub account and register your products. Once the products are registered, you will want to point your local development environment to the Sandbox Marketplace. You can do this by setting the PackageRegistryUrl setting in appsettings.json (you can also manage this via the Oqtane Admin Dashboard UI and choosing the System Info option - Options tab).
+In order to test the licensing process, you will want to use the Sandbox Marketplace. You can login to the Sandbox Marketplace using your GitHub account and register your owner information (which will require integration with Stripe Connect) as well as your products. Once the products are registered, you will want to point your local development environment to the Sandbox Marketplace. You can do this by setting the PackageRegistryUrl setting in appsettings.json (you can also manage this via the Oqtane Admin Dashboard UI and choosing the System Info option - Options tab).
 
 appsettings.json
 
