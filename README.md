@@ -9,7 +9,7 @@ Oqtane.LicensedModule.Client.csproj
 Includes the Nuget package reference to Oqtane.Licensing:
 
 ```
-<PackageReference Include="Oqtane.Licensing" Version="5.0.0" />
+<PackageReference Include="Oqtane.Licensing" Version="5.0.1" />
 ```
 
 Index.razor
