@@ -72,7 +72,7 @@ appsettings.json
   "PackageRegistryUrl": "https://sandbox.oqtane.net"
 ```
 
-Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashboard and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow for these products. 
+Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashboard and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow for these products. Please note that license keys generated in the Sandbox Marketplace are only valid for 7 days.
 
 Be sure to remember to reset the PackageRegistryUrl when you are finished testing.
 
@@ -84,5 +84,12 @@ First you will need to create the product in the Marketplace (see above). Naviga
 
 Once the license key is generated, you can return to your local installation and you can add a "licensing=testmode" parameter to the querystring in your browser. This will force the licensing component into an unlicensed flow where you have the ability to Activate a license key manually. Clicking Activate provides the option to Fetch a license key from the Marketplace server or manually enter a license key and click Validate.
 
+# License Keys
+
+License keys are stored locally in the /bin folder of an installation. They utilize a file naming convention of Package Name plus an ".lic" extension so that they are easy to identify. License keys are specific to a product variant and installation (and Marketplace). License keys contain 10 segments of 4 characters (an example is included below).
+
+```
+C686-855A-7572-C55F-715E-58EB-C31D-9999-1231-0001
+```
 
 
