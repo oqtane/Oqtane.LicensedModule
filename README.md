@@ -38,7 +38,7 @@ Dependencies = "Oqtane.Licensing.Client.Oqtane,Oqtane.Licensing.Shared.Oqtane"
 
 Oqtane.LicensedModule.Package.csproj
 
-Note that the Oqtane.LicensedModule.Package project contains no specific reference to the licensing component. This is because the licensing component is distributed by default with the Oqtane Framework starting in version 5.0. If you need to support older versions of Oqtane (ie. 4.x, 3.x, etc...) then you will need to distribute the licensing component with your module. This would require you to modify the following files:
+The Oqtane.LicensedModule.Package project must include references to the licensing assemblies so they are distributed with your module. 
 
 debug.cmd (to copy the assemblies during development)
 
