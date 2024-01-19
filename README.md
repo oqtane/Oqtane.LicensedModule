@@ -86,7 +86,7 @@ Once the license key is generated, you can return to your local installation and
 
 # License Keys
 
-License keys are stored locally in the /bin folder of an installation. They utilize a file naming convention of Package Name plus an ".lic" extension so that they are easy to identify. License keys are specific to a product variant and installation (and Marketplace). License keys contain 10 segments of 4 characters (an example is included below).
+License files are stored locally in the /bin folder of an installation. They utilize a file naming convention of Package Name plus an ".lic" extension so that they are easy to identify. If a license file is deleted, it will be regenerated automatically the next time the module is accessed (in production only). License keys are specific to a product variant and installation (and Marketplace). License keys contain 10 segments of 4 characters (an example is included below).
 
 ```
 C686-855A-7572-C55F-715E-58EB-C31D-9999-1231-0001
