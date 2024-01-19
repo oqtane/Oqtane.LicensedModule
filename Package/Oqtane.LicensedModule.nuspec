@@ -21,8 +21,11 @@
   </metadata>
   <files>
     <file src="..\Client\bin\Release\net8.0\Oqtane.LicensedModule.Client.Oqtane.dll" target="lib\net8.0" /> 
-    <file src="..\Client\bin\Release\net8.0\Oqtane.LicensedModule.Client.Oqtane.pdb" target="lib\net8.0" /> 
-    <file src="icon.png" target="" />
+    <file src="..\Client\bin\Release\net8.0\Oqtane.LicensedModule.Client.Oqtane.pdb" target="lib\net8.0" />
+	<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Client.Oqtane.dll" target="lib\net8.0" />
+	<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Shared.Oqtane.dll" target="lib\net8.0" />
+	<file src="..\Client\bin\Release\net8.0\Oqtane.Licensing.Server.Oqtane.dll" target="lib\net8.0" />
+	<file src="icon.png" target="" />
     <file src="license.txt" target="" />
   </files>
 </package>
