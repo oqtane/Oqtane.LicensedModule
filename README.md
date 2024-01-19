@@ -76,3 +76,13 @@ Once this is configured, when you browse to the Module or Theme Management areas
 
 Be sure to remember to reset the PackageRegistryUrl when you are finished testing.
 
+# Development 
+
+When performing local development (ie. on localhost or 127.0.0.1) the licensing component will always indicate that a module is licensed. This ensures that your development activities are never impacted based on licensing restrictions. If you would like to simulate the licensing flow of a production environment for testing purposes, you will need to generate a license key for your installation.
+
+First you will need to create the product in the Marketplace (see above). Navigate to the License section and choose the Licenses button next to the specific license variant you want to activate. This will display a modal dialog where you can enter the Installation Id of your local environment (found in the System Info area of the Admin Dashboard or appsettings.json file) as well as your Email Address and click Generate. This will create a license key and a notification will be sent to your email.
+
+Once the license key is generated, you can return to your local installation and you can add a "licensing=testmode" parameter to the querystring in your browser. This will force the licensing component into an unlicensed flow where you have the ability to Activate a license key manually. Clicking Activate provides the option to Fetch a license key from the Marketplace server or manually enter a license key and click Validate.
+
+
+
