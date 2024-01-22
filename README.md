@@ -9,7 +9,7 @@ Oqtane.LicensedModule.Client.csproj
 Includes the Nuget package reference to Oqtane.Licensing:
 
 ```
-<PackageReference Include="Oqtane.Licensing" Version="5.0.0" />
+<PackageReference Include="Oqtane.Licensing" Version="5.0.1" />
 ```
 
 Index.razor
@@ -72,7 +72,24 @@ appsettings.json
   "PackageRegistryUrl": "https://sandbox.oqtane.net"
 ```
 
-Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashboard and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow for these products. 
+Once this is configured, when you browse to the Module or Theme Management areas of the Admin Dashboard and choose Install, the products will be loaded from the Sandbox Marketplace. It will allow you to perform a complete simulated purchase and licensing flow for these products. Please note that license keys generated in the Sandbox Marketplace are only valid for 7 days.
 
 Be sure to remember to reset the PackageRegistryUrl when you are finished testing.
+
+# Development 
+
+When performing local development (ie. on localhost or 127.0.0.1) the licensing component will always indicate that a module is licensed. This ensures that your development activities are never impacted based on licensing restrictions. If you would like to simulate the licensing flow of a production environment for testing purposes, you will need to generate a license key for your installation.
+
+First you will need to create the product in the Marketplace (see above). Navigate to the License section and choose the Licenses button next to the specific license variant you want to activate. This will display a modal dialog where you can enter the Installation Id of your local environment (found in the System Info area of the Admin Dashboard or appsettings.json file) as well as your Email Address and click Generate. This will create a license key and a notification will be sent to your email.
+
+Once the license key is generated, you can return to your local installation and you can add a "licensing=testmode" parameter to the querystring in your browser. This will force the licensing component into an unlicensed flow where you have the ability to Activate a license key manually. Clicking Activate provides the option to Fetch a license key from the Marketplace server or manually enter a license key and click Validate.
+
+# License Keys
+
+License files are stored locally in the /bin folder of an installation. They utilize a file naming convention of Package Name plus an ".lic" extension so that they are easy to identify. If a license file is deleted, it will be regenerated automatically the next time the module is accessed (in production only). License keys are specific to a product variant and installation (and Marketplace). License keys contain 10 segments of 4 characters (an example is included below).
+
+```
+C686-855A-7572-C55F-715E-58EB-C31D-9999-1231-0001
+```
+
 
