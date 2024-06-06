@@ -9,7 +9,7 @@ Oqtane.LicensedModule.Client.csproj
 Includes the Nuget package reference to Oqtane.Licensing:
 
 ```
-<PackageReference Include="Oqtane.Licensing" Version="5.0.1" />
+<PackageReference Include="Oqtane.Licensing" Version="5.1.0" />
 ```
 
 Index.razor
@@ -91,6 +91,12 @@ License files are stored locally in the /bin folder of an installation. They uti
 ```
 C686-855A-7572-C55F-715E-58EB-C31D-9999-1231-0001
 ```
+
+![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/e28d7b22-c8b4-498b-97ae-3de067679382)
+
+![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/62829cef-3eea-4681-a50f-f259d46812e3)
+
+
 
 # Webhooks
 
