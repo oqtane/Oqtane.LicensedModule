@@ -84,6 +84,10 @@ First you will need to create the product in the Marketplace (see above). Naviga
 
 Once the license key is generated, you can return to your local installation and you can add a "licensing=testmode" parameter to the querystring in your browser. This will force the licensing component into an unlicensed flow where you have the ability to Activate a license key manually. Clicking Activate provides the option to Fetch a license key from the Marketplace server or manually enter a license key and click Validate.
 
+![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/e28d7b22-c8b4-498b-97ae-3de067679382)
+
+![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/62829cef-3eea-4681-a50f-f259d46812e3)
+
 # License Keys
 
 License files are stored locally in the /bin folder of an installation. They utilize a file naming convention of Package Name plus an ".lic" extension so that they are easy to identify. If a license file is deleted, it will be regenerated automatically the next time the module is accessed (in production only). License keys are specific to a product variant and installation (and Marketplace). License keys contain 10 segments of 4 characters (an example is included below).
@@ -91,12 +95,6 @@ License files are stored locally in the /bin folder of an installation. They uti
 ```
 C686-855A-7572-C55F-715E-58EB-C31D-9999-1231-0001
 ```
-
-![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/e28d7b22-c8b4-498b-97ae-3de067679382)
-
-![image](https://github.com/oqtane/Oqtane.LicensedModule/assets/15242923/62829cef-3eea-4681-a50f-f259d46812e3)
-
-
 
 # Webhooks
 
